@@ -10,6 +10,17 @@ sudo apt-get install python3-dev python3.10-dev python3-setuptools python3-pip p
 sudo apt-get install python3.10-venv
 sudo apt-get install software-properties-common
 sudo apt install mariadb-server mariadb-client
+sudo nano /etc/mysql/my.cnf
+Add the following block of code exactly as is:
+
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+
 sudo apt-get install redis-server
 sudo apt-get install xvfb libfontconfig wkhtmltopdf
 sudo apt-get install libmysqlclient-dev
